@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [Suite]" parallel="methods">
+  <test name="parallel(failed)" parallel="methods" preserve-order="false">
+    <classes>
+      <class name="com.TestClasses.ParellelTest">
+        <methods>
+          <include name="facebookValidate"/>
+          <include name="gmailValidate"/>
+          <include name="validate"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

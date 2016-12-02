@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">parallel</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">31.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">parallel &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">com.TestClasses.ParellelTest<td><a href="#m1"><b>facebookValidate</b>  </a></td><td class="numi">1</td><td class="numi">28647</td></tr><tr class="failedodd"><td><a href="#m2"><b>validate</b>  </a></td><td class="numi">1</td><td class="numi">31373</td></tr><tr class="failedodd"><td><a href="#m3"><b>gmailValidate</b>  </a></td><td class="numi">1</td><td class="numi">30147</td></tr>
+</table>
+<h1>parallel</h1>
+<a id="m1"></a><h2>com.TestClasses.ParellelTest:facebookValidate</h2>
+<div style="padding-left:3em">
+<p>Invalid use of SingleClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one.</p>
+org.apache.http.impl.conn.SingleClientConnManager.getConnection(SingleClientConnManager.java:216)
+<br/>at org.apache.http.impl.conn.SingleClientConnManager$1.getConnection(SingleClientConnManager.java:190)
+<br/>at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:401)
+<br/>at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:284)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:264)
+<br/>at org.openqa.selenium.chrome.ChromeCommandExecutor.execute(ChromeCommandExecutor.java:52)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:389)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:537)
+<br/>at com.hetlperutil.LoadBrowserUtil.loadBrowser(LoadBrowserUtil.java:41)
+<br/>at com.TestClasses.ParellelTest.facebookValidate(ParellelTest.java:54)
+<br/>14 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>com.TestClasses.ParellelTest:validate</h2>
+<div style="padding-left:3em">
+<p>Compound class names are not supported. Consider searching for one class name and filtering the results.
+Build info: version: &apos;2.5.0&apos;, revision: &apos;13548&apos;, time: &apos;2011-08-24 13:44:31&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.By.className(By.java:141)
+<br/>at org.openqa.selenium.support.pagefactory.Annotations.buildByFromLongFindBy(Annotations.java:102)
+<br/>at org.openqa.selenium.support.pagefactory.Annotations.buildByFromFindBy(Annotations.java:90)
+<br/>at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:55)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.&lt;init&gt;(DefaultElementLocator.java:47)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:32)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:47)
+<br/>at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:131)
+<br/>at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:123)
+<br/>at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:110)
+<br/>at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:96)
+<br/>at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:83)
+<br/>at com.TestClasses.ParellelTest.validate(ParellelTest.java:47)
+<br/>14 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>com.TestClasses.ParellelTest:gmailValidate</h2>
+<div style="padding-left:3em">
+<p>Invalid use of SingleClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one.</p>
+org.apache.http.impl.conn.SingleClientConnManager.getConnection(SingleClientConnManager.java:216)
+<br/>at org.apache.http.impl.conn.SingleClientConnManager$1.getConnection(SingleClientConnManager.java:190)
+<br/>at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:401)
+<br/>at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:284)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:264)
+<br/>at org.openqa.selenium.chrome.ChromeCommandExecutor.execute(ChromeCommandExecutor.java:52)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:389)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:537)
+<br/>at com.hetlperutil.LoadBrowserUtil.loadBrowser(LoadBrowserUtil.java:41)
+<br/>at com.TestClasses.ParellelTest.gmailValidate(ParellelTest.java:61)
+<br/>14 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

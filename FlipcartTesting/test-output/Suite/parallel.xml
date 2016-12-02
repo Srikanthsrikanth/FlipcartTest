@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="sreekanth" name="com.TestClasses.ParellelTest" tests="3" failures="3" timestamp="2 Dec 2016 02:28:33 GMT" time="31.401" errors="0">
+  <testcase name="facebookValidate" time="28.647" classname="com.TestClasses.ParellelTest">
+    <failure type="java.lang.IllegalStateException" message="Invalid use of SingleClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one.">
+      <![CDATA[java.lang.IllegalStateException: Invalid use of SingleClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one.
+	at org.apache.http.impl.conn.SingleClientConnManager.getConnection(SingleClientConnManager.java:216)
+	at org.apache.http.impl.conn.SingleClientConnManager$1.getConnection(SingleClientConnManager.java:190)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:401)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:284)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:264)
+	at org.openqa.selenium.chrome.ChromeCommandExecutor.execute(ChromeCommandExecutor.java:52)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:537)
+	at com.hetlperutil.LoadBrowserUtil.loadBrowser(LoadBrowserUtil.java:41)
+	at com.TestClasses.ParellelTest.facebookValidate(ParellelTest.java:54)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="gmailValidate" time="30.147" classname="com.TestClasses.ParellelTest">
+    <failure type="java.lang.IllegalStateException" message="Invalid use of SingleClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one.">
+      <![CDATA[java.lang.IllegalStateException: Invalid use of SingleClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one.
+	at org.apache.http.impl.conn.SingleClientConnManager.getConnection(SingleClientConnManager.java:216)
+	at org.apache.http.impl.conn.SingleClientConnManager$1.getConnection(SingleClientConnManager.java:190)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:401)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:284)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:264)
+	at org.openqa.selenium.chrome.ChromeCommandExecutor.execute(ChromeCommandExecutor.java:52)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:537)
+	at com.hetlperutil.LoadBrowserUtil.loadBrowser(LoadBrowserUtil.java:41)
+	at com.TestClasses.ParellelTest.gmailValidate(ParellelTest.java:61)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="validate" time="31.373" classname="com.TestClasses.ParellelTest">
+    <failure type="org.openqa.selenium.IllegalLocatorException" message="Compound class names are not supported. Consider searching for one class name and filtering the results.
+Build info: version: &amp;apos;2.5.0&amp;apos;, revision: &amp;apos;13548&amp;apos;, time: &amp;apos;2011-08-24 13:44:31&amp;apos;
+System info: os.name: &amp;apos;Windows 10&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;10.0&amp;apos;, java.version: &amp;apos;1.8.0_65&amp;apos;
+Driver info: driver.version: unknown">
+      <![CDATA[org.openqa.selenium.IllegalLocatorException: Compound class names are not supported. Consider searching for one class name and filtering the results.
+Build info: version: '2.5.0', revision: '13548', time: '2011-08-24 13:44:31'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By.className(By.java:141)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildByFromLongFindBy(Annotations.java:102)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildByFromFindBy(Annotations.java:90)
+	at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:55)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:47)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:32)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:47)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:131)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:123)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:110)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:96)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:83)
+	at com.TestClasses.ParellelTest.validate(ParellelTest.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>
